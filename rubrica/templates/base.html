@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi sitio con navbar</title>
+    {% load static %}
+    <!--  <link rel="stylesheet" href="{% static 'css/styles.css' %}">-->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Aquí va tu barra de navegación o sidebar -->
+            <ul>
+                <li><a href="{% url 'index' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Sobre Nosotros</a></li>
+                <li><a href="{% url 'contact' %}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Aquí va el contenido dinámico -->
+        {% block content %}
+        <!-- El contenido específico de cada página aparecerá aquí -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2024 Mi Proyecto. Todos los derechos reservados.</p>
+    </footer>
+
+  <!--    <script src="{% static 'js/scripts.js' %}"></script>-->
+</body>
+</html>
