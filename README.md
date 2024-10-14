@@ -34,14 +34,23 @@ pip install -r requirements.txt
 
 ### 4. Configurar la base de datos
 DATABASES = {
+
     'default': {
+    
         'ENGINE': 'django.db.backends.postgresql',
+        
         'NAME': 'nombre_base_datos',
+        
         'USER': 'tu_usuario',
+        
         'PASSWORD': 'tu_contraseña',
+        
         'HOST': 'localhost',
+        
         'PORT': '5432',
+        
     }
+    
 }
 
 
@@ -64,9 +73,13 @@ Crea un superusuario para acceder al panel de administración de Django:
 python manage.py createsuperuser
 ```
 Sigue las instrucciones en pantalla para crear el superusuario.
+
 Usuario: SU
+
 Corre: Tu correo electronico
+
 Contrasenia:SU1234
+
 
 ### 7. Ejecutar el servidor de desarrollo
 Finalmente, ejecuta el servidor de desarrollo de Django:
