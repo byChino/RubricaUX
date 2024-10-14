@@ -33,6 +33,7 @@ pip install -r requirements.txt
 ☝🏿Si falla instalarlos manualmente
 
 ### 4. Configurar la base de datos
+``` bash
 DATABASES = {
 
     'default': {
@@ -52,7 +53,7 @@ DATABASES = {
     }
     
 }
-
+```
 
 ### 5. Aplicar las migraciones
 Aplica las migraciones para crear las tablas en la base de datos:
