@@ -22,14 +22,17 @@ Primero, clona el repositorio desde GitHub:
 git clone https://github.com/byChino/RubricaUX.git
 cd RubricaUX
 ```
-###2. Crear el entorno virtual
-
+### 2. Crear el entorno virtual
+```bash
 python -m venv venv
-###3. Instalar las dependencias
+```
+### 3. Instalar las dependencias
+```bash
 pip install -r requirements.txt
+```
 ☝🏿Si falla instalarlos manualmente
 
-###4. Configurar la base de datos
+### 4. Configurar la base de datos
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -42,19 +45,31 @@ DATABASES = {
 }
 
 
-###5. Aplicar las migraciones
+### 5. Aplicar las migraciones
 Aplica las migraciones para crear las tablas en la base de datos:
-
+```bash
 python manage.py migrate
-###6. Crear un superusuario
+```
+
+Nota: Borrar el contenido de la carpeta migratas antes de usar este comando, y debes aplicar el siguiente comando
+```bash
+python manage.py makemigrations
+```
+Tambien si quieres cargar un modelo en particular solo pon el nombre adelante de makemigrations
+
+### 6. Crear un superusuario
 Crea un superusuario para acceder al panel de administración de Django:
 
+```bash
 python manage.py createsuperuser
+```
 Sigue las instrucciones en pantalla para crear el superusuario.
 Usuario: SU
 Corre: Tu correo electronico
 Contrasenia:SU1234
 
-###7. Ejecutar el servidor de desarrollo
+### 7. Ejecutar el servidor de desarrollo
 Finalmente, ejecuta el servidor de desarrollo de Django:
+```bash
 python manage.py runserver
+```
