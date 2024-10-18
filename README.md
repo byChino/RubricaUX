@@ -25,6 +25,7 @@ cd RubricaUX
 ### 2. Crear el entorno virtual
 ```bash
 python -m venv venv
+venv/scripts/activate
 ```
 ### 3. Instalar las dependencias
 ```bash
