@@ -1,0 +1,235 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+.header-container {
+    background-color: var(--navbar-background);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+nav.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .nav-link {
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+/* Estilos para los iconos dentro de los enlaces de navegación */
+nav .nav-link i {
+    color: white;
+}
+
+/* Enlace en hover (cuando el mouse pasa sobre el enlace) */
+nav .nav-link:hover {
+    color: var(--navbar-link-hover-color);
+}
+
+.navbar-toggler {
+    border: none; /* Elimina el borde del botón */
+    background-color: transparent; /* Elimina el fondo */
+    color: white; /* Cambia el color del ícono */
+  }
+  
+  .navbar-toggler-icon {
+    color: white; /* Asegúrate de que el ícono del menú sea visible */
+  }
+  
+
+.logo-container img {
+    width: 60px; /* Ajusta el tamaño del logo para pantallas más pequeñas */
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--input-border-color);
+}
+
+/* Ajustar Dropdown */
+.dropdown-toggle {
+    background-color: transparent; /* Elimina el fondo del botón */
+    border: none; /* Elimina cualquier borde */
+    color: var(--navbar-text-color); /* Mantiene el color del texto */
+    font-weight: 500;
+    padding: 10px 15px; /* Espaciado interno del botón */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+/* Lista de opciones del dropdown */
+.dropdown-menu {
+    background-color: var(--background-color-dropdown); /* Fondo del menú */
+    border: 1px solid var(--border-color); /* Borde del menú */
+    color: var(--text-color); /* Color del texto */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/* Elimina el hover background del botón */
+.dropdown-toggle:hover, .dropdown-toggle:focus {
+    background-color: transparent; /* Evita que aparezca fondo en hover */
+    color: var(--navbar-link-hover-color); /* Cambia solo el color del texto en hover */
+}
+
+/* Estilos para los elementos dentro del dropdown */
+.dropdown-menu .dropdown-item {
+    color: var(--text-color); /* Color de los links dentro del dropdown */
+    padding: 8px 15px; /* Espaciado interno de los items */
+    transition: background-color 0.3s;
+}
+
+/* Hover en los items del dropdown */
+.dropdown-menu .dropdown-item:hover {
+    background-color: var(--dropdown-item-hover-background); /* Fondo de items en hover */
+    color: var(--text-color-hover); /* Color del texto en hover */
+}
+
+/* Menú hamburguesa para pantallas pequeñas */
+#toggler {
+    display: none;
+}
+
+label[for="toggler"] {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    label[for="toggler"] {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+    }
+
+    #toggler:checked ~ .menu {
+        display: flex;
+    }
+
+    nav.nav-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-container img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Botón de tema */
+.theme-button {
+    background-color: var(--button-color);
+    color: var(--text-color-theme);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer.footer {
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer p, footer address {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+footer address i {
+    margin-right: 8px;
+    color: var(--footer-text-color);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .nav-icons {
+        display: block;
+        text-align: center;
+    }
+
+    footer.footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* Variables del Modo Claro */
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --navbar-background: #4A90E2; /* Azul del encabezado */
+    --navbar-text-color: #ffffff;
+    --navbar-link-hover-color: #007bff;
+    --footer-background: #4A90E2;
+    --footer-text-color: #ffff;
+    --text-color-theme:#ffff;
+    --background-color-dropdown: #ffffff;
+    --border-color: #dddddd;
+    --dropdown-hover-background: #f1f1f1;
+    --text-color-hover: #007bff;
+    --navbar-text-color: #333;
+    --navbar-link-hover-color: #007bff;
+}
+
+/* Variables del Modo Oscuro */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f1f1f1;
+    --navbar-background: #5AC8FA;
+    --navbar-text-color: #f1f1f1;
+    --navbar-link-hover-color: #4AC7FF;
+    --footer-background: #5AC8FA;
+    --footer-text-color: #f1f1f1;
+    --text-color-theme:#ffff;
+    --background-color-dropdown: #5AC8FA;
+    --border-color: #555555;
+    --dropdown-hover-background: #444444;
+    --text-color-hover: #ffffff;
+    --navbar-text-color: #f1f1f1;
+    --navbar-link-hover-color: #4AC7FF;
+}

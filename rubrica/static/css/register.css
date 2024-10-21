@@ -1,0 +1,123 @@
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Diseño de la página */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cabecera del tema */
+header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.theme-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Diseño del formulario de registro */
+.register-container {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+
+
+.register-box {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--panel-color);
+    border-radius: 20px;
+
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.register-header {
+    background-color: var(--highlight-color);
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.register-header h2 {
+    margin: 0;
+    font-weight: bold;
+    color: var(--highlight-text-color);
+}
+
+/* Campos de formulario */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilo de botones */
+.btn-primary {
+    background-color: var(--button-primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    background-color: var(--button-secondary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .register-box {
+        width: 100%;
+        margin: 0 10px;
+    }
+}
+
+/* Variables del Modo Claro */
+:root {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --panel-color: #ffffff;
+    --button-primary-color: #4A90E2;
+    --button-secondary-color: #FF9800;
+    --highlight-color: #4A90E2;
+    --highlight-text-color: #ffffff;
+}
+
+/* Variables del Modo Oscuro */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --panel-color: #333333;
+    --button-primary-color: #5AC8FA;
+    --button-secondary-color: #FFD700;
+    --highlight-color: #5AC8FA;
+    --highlight-text-color:#ffffff;
+}

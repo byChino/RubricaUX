@@ -1,0 +1,313 @@
+/* Estilos Generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Campos de texto específicos para Usuario y Contraseña */
+input[type="text"],
+input[type="password"] {
+    font-family: 'Roboto', sans-serif; /* Los cuadros de texto usan Roboto */
+    font-size: 16px;
+    font-weight: 400; /* Puedes ajustar el peso de la fuente aquí si es necesario */
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.theme-button {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-container {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-box {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--panel-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left-panel {
+    flex: 1;
+    background-color: var(--highlight-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-panel img {
+    width: 200px; /* Cambia el ancho según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 20px; /* Ajusta el espaciado si es necesario */
+}
+
+
+
+.left-panel h2, .left-panel p {
+    color: var(--highlight-text-color);
+}
+
+.right-panel {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--panel-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+    justify-content: center; /* Centrar verticalmente */
+}
+
+.right-panel img {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 2px solid var(--input-border-color); /* Añade un borde */
+    margin-bottom: 20px;
+}
+
+
+
+
+/* Centrar el texto del título */
+/* Estilos para los textos de los campos de formulario */
+.right-panel h2,
+.right-panel label {
+    color: var(--text-color); /* Usar la variable del color de texto para adaptarse al tema */
+}
+
+
+
+/* Ajustar el formulario al centro */
+form {
+    width: 100%;
+    max-width: 300px; /* Limita el ancho del formulario */
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Apartado del forms Login*/
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container i {
+    position: absolute;
+    left: 10px;
+  
+    color: var(--icon-color); /* Color de los íconos */
+}
+
+.input-container input {
+    width: 100%;
+    padding-left: 40px; /* Espacio para el ícono */
+    padding-right: 40px; /* Espacio para el ícono de ojo */
+}
+
+/* Para el ícono de ojo (mostrar/ocultar contraseña) */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+
+    color: var(--icon-color);
+}
+
+
+
+/* Botones ajustados */
+form button {
+    width: 100%; /* Ocupa todo el ancho del contenedor del formulario */
+    margin-bottom: 10px;
+}
+
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+}
+
+
+/* Para asegurar que el ícono de mostrar/ocultar esté alineado correctamente */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-left: 40px; /* Espacio para el ícono de candado */
+    padding-right: 40px; /* Espacio para el ícono de ojo */
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    color: var(--icon-color);
+}
+
+/* Ajuste para el input de usuario */
+.input-container i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: var(--icon-color);
+}
+
+.input-container input {
+    padding-left: 40px; /* Espacio suficiente para el ícono de usuario */
+}
+
+
+
+
+
+
+
+
+
+/*
+.right-panel .btn-primary {
+    background-color: var(--button-primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}*/
+.right-panel .btn-primary {
+    background-color: var(--button-primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.right-panel .btn-secundary {
+    background-color: var(--button-secondary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Hover para los botones */
+.btn-primary:hover {
+    background-color: var(--button-primary-hover-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--button-secondary-hover-color);
+}
+
+/* Variables del Modo Claro */
+:root {
+    --background-color: #f9f9f9; /* Fondo claro */
+    --text-color: #333333; /* Color del texto oscuro */
+    --panel-color: #ffffff; /* Fondo de paneles blanco */
+    --input-background-color: #f0f0f0; /* Fondo de los campos de entrada */
+    --input-border-color: #cccccc; /* Borde de los campos de entrada */
+    --button-primary-color: #4A90E2; /* Color del botón primario (azul) */
+    --button-secondary-color: #FF9800; /* Color del botón secundario (naranja) */
+    --highlight-color: #4A90E2; /* Color de resaltar (azul) */
+    --highlight-text-color: #ffffff; /* Color del texto resaltado */
+    --placeholder-color: #888888; /* Color del texto placeholder */
+    --icon-color: #333; /* Color de los íconos */
+    --button-primary-hover-color: #357ABD;
+    --button-secondary-hover-color: #E68A00;
+}
+
+/* Variables del Modo Oscuro */
+body.dark-mode {
+    --background-color: #121212; /* Fondo oscuro */
+    --text-color: #ffffff; /* Color del texto claro */
+    --panel-color: #333333; /* Fondo de paneles oscuro */
+    --input-background-color: #444444; /* Fondo de los campos de entrada */
+    --input-border-color: #555555; /* Borde de los campos de entrada */
+    --button-primary-color: #5AC8FA; /* Color del botón primario (azul claro) */
+    --button-secondary-color: #FFD700; /* Color del botón secundario (dorado) */
+    --highlight-color: #5AC8FA; /* Color de resaltar (azul claro) */
+    --highlight-text-color: #000000; /* Color del texto resaltado en oscuro */
+    --icon-color: #fff; /* Color de los íconos en modo oscuro */
+    --button-primary-hover-color: #4AC7FF;
+    --button-secondary-hover-color: #E6B800;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .login-box {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    /* Ocultar el panel izquierdo en pantallas pequeñas */
+    .left-panel {
+        display: none;
+    }
+
+    .right-panel {
+        width: 100%;
+    }
+}

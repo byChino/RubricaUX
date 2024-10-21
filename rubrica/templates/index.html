@@ -1,6 +1,39 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Bienvenido a la página principal</h1>
-<p>Este es el contenido de la página de inicio.</p>
+<div class="container mt-5">
+    <h1>Bienvenido a la página principal</h1>
+    <p>Este es el contenido de la página de inicio. Aquí puedes poner información relevante o enlaces importantes.</p>
+    
+    <!-- Ejemplo de una sección adicional con enlaces o información -->
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Enlace 1</h5>
+                    <p class="card-text">Descripción de lo que hace este enlace.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Enlace 2</h5>
+                    <p class="card-text">Descripción de lo que hace este enlace.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Enlace 3</h5>
+                    <p class="card-text">Descripción de lo que hace este enlace.</p>
+                    <a href="#" class="btn btn-primary">Ver más</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
