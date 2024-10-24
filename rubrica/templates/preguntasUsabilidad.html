@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %} <!-- Asegúrate de cargar los archivos estáticos -->
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Rubric Generator</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/preguntasUsabilidad.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="step-text">Paso 2/5</span>
+        </div>
+
+        <h1>Usabilidad</h1>
+        <p class="description">Seleccione las preguntas que le gustaría evaluar en su rúbrica</p>
+
+        <ul class="principles-list">
+            <li><input type="checkbox" id="question1" name="question1"> <label for="question1">Question 1</label></li>
+            <li><input type="checkbox" id="question2" name="question2"> <label for="question2">Question 2</label></li>
+            <li><input type="checkbox" id="question3" name="question3"> <label for="question3">Question 3</label></li>
+            <li><input type="checkbox" id="question4" name="question4" checked> <label for="question4">Question 4</label></li>
+        </ul>
+
+        <button class="next-button">Siguiente</button>
+    </div>
+
+    <!-- Vinculación al archivo JS -->
+    
+</body>
+</html>
+{% endblock %}

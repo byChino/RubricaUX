@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %} <!-- Asegúrate de incluir esto para usar archivos estáticos -->
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear una nueva rúbrica</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crear una nueva rúbrica</h1>
+        <div class="form-group">
+            <label for="project-name">Nombre del proyecto</label>
+            <input type="text" id="project-name" placeholder="Ingresa el nombre de tu proyecto">
+        </div>
+        <div class="form-group">
+            <label for="company-name">Compañía o nombre del equipo</label>
+            <input type="text" id="company-name" placeholder="Ingresa el nombre de tu compañía o equipo">
+            <button class="continue-button">Continuar</button>
+        </div>
+
+        <!-- Título "Tus rúbricas recientes" y barra de búsqueda -->
+        <h2 class="recent-title">Tus rúbricas recientes</h2>
+        <div class="search-container">
+            <input type="text" id="rubric-search" placeholder="Buscar rúbrica..." onkeyup="filterRubrics()">
+        </div>
+
+        <div class="rubric-cards" id="rubric-cards">
+            <div class="rubric-card" data-name="Petmark">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen Rubrica 1">
+                <h3>Petmark</h3>
+                <p>Revisión de diseño de producto</p>
+                <small>Creado hace 5 días</small>
+            </div>
+            <div class="rubric-card" data-name="Armony">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen Rubrica 2">
+                <h3>Armony</h3>
+                <p>Lanzamiento de nuevo producto</p>
+                <small>Creado hace 2 días</small>
+            </div>
+            <div class="rubric-card" data-name="Demo">
+                <img src="https://via.placeholder.com/300x200" alt="Imagen Rubrica 3">
+                <h3>Demo</h3>
+                <p>Día de demostración</p>
+                <small>Creado hace 1 día</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vinculación al archivo JS -->
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
+{% endblock %}

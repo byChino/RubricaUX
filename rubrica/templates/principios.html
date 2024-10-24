@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %} <!-- Asegúrate de cargar los archivos estáticos -->
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Rubric Generator</title>
+    <!-- Vinculación al archivo CSS -->
+    <link rel="stylesheet" href="{% static 'css/principios.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>UX Generador de Rubricas</h1>
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <span class="step-text">Paso 1/5</span>
+        </div>
+        <p class="description">
+            Este generador de rúbricas le ayudará a evaluar la experiencia del usuario de una interfaz. Seleccionará los principios que desea incluir en la rúbrica. Para cada principio, calificará la interfaz en una escala de 1 a 5.
+        </p>
+
+        <div class="principles">Principles</div>
+        <ul class="principles-list">
+            <li><input type="checkbox" id="accessibility" name="accessibility" checked> <label for="accessibility">Accesibilidad</label></li>
+            <li><input type="checkbox" id="simplicity" name="simplicity"> <label for="simplicity">Simplicidad</label></li>
+            <li><input type="checkbox" id="usability" name="usability" checked> <label for="usability">Usabilidad</label></li>
+            <li><input type="checkbox" id="consistency" name="consistency"> <label for="consistency">Consistencia</label></li>
+            <li><input type="checkbox" id="user-centered" name="user-centered"> <label for="user-centered">Centrado en el Usuario</label></li>
+        </ul>
+
+        <div class="form-group">
+            <label for="rubric-name">Nombre de la rubrica</label>
+            <input type="text" id="rubric-name" placeholder="Introduce el nombre de la rubrica">
+        </div>
+
+        <button class="next-button">Siguiente</button>
+    </div>
+
+    <!-- Vinculación al archivo JS -->
+    
+</body>
+</html>
+{% endblock %}
